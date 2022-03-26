@@ -3,36 +3,37 @@
     "configurations": [
         {
             "name": "Debug OS main",
-            "type": "cppdbg",
+            "type": "lldb",
             "request": "launch",
-            // Resolved by CMake Tools:
             "program": "${workspaceFolder}/out/os",
-            "args": [],
-            "stopAtEntry": false,
+            "args": ["input/os_0"],
+            "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
-            "MIMode": "gdb",
+            "MIMode": "lldb",
+            "targetArchitecture": "arm64",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "miDebuggerPath": "/usr/bin/lldb"
         },
         {
             "name": "Debug mem main",
-            "type": "cppdbg",
+            "type": "lldb",
             "request": "launch",
-            // Resolved by CMake Tools:
             "program": "${workspaceFolder}/out/paging",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
-            "MIMode": "gdb",
+            "MIMode": "lldb",
+            "targetArchitecture": "amr64",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
